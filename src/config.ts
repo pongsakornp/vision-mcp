@@ -24,7 +24,7 @@ export interface VisionConfig {
 
 export const DEFAULTS = {
   geminiModel: "gemini-flash-latest",
-  grokModel: "grok-4-vision",
+  grokModel: "grok-4.5",
   openrouterModel: "google/gemini-2.5-flash",
   timeoutMs: 20000,
 } as const;

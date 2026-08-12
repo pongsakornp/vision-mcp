@@ -135,7 +135,7 @@ Analyze a video (mp4, webm, mov, avi, mkv, flv, wmv, m4v). Extracts up to 8 even
 | `XAI_API_KEY` | — | Grok/xAI API key (tried second) |
 | `OPENROUTER_API_KEY` | — | OpenRouter key (tried last) |
 | `VISION_GEMINI_MODEL` | `gemini-flash-latest` | Gemini model override |
-| `VISION_GROK_MODEL` | `grok-4-vision` | Grok model override |
+| `VISION_GROK_MODEL` | `grok-4.5` | Grok model override |
 | `VISION_OPENROUTER_MODEL` | `google/gemini-flash-latest` | OpenRouter model override |
 | `VISION_TIMEOUT_MS` | `20000` | Per-backend request timeout |
 
