@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * vision-mcp — MCP server exposing analyze_image and analyze_video tools.
  *
