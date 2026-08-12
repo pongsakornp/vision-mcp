@@ -34,23 +34,14 @@ Most coding agents run on strong text models (DeepSeek, Claude, etc.) that can't
 
 ## Install
 
-### npx from GitHub (no npm publish needed — works today)
+### npx from GitHub (recommended — no npm publish needed)
 
 ```bash
 # Run directly (no install)
 npx -y github:pongsakornp/vision-mcp
 ```
 
-> npx clones the repo, installs deps, auto-builds via the `prepare` script, and runs the server over stdio. This is the recommended install method until the package is published to the npm registry.
-
-### npm (after publish)
-
-```bash
-npx -y vision-mcp
-
-# Or install globally
-npm install -g vision-mcp
-```
+> npx clones the repo, installs deps, auto-builds via the `prepare` script, and runs the server over stdio.
 
 ### From source
 
