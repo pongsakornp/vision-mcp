@@ -13,6 +13,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import path from "node:path";
+import { realpathSync } from "node:fs";
 
 import { loadConfig, hasAnyKey } from "./config.js";
 import { buildBackends, analyzeWithFallback } from "./backends.js";
@@ -143,7 +144,16 @@ export async function main(): Promise<void> {
   await server.connect(transport);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+function isEntrypoint(): boolean {
+  if (!process.argv[1]) return false;
+  try {
+    return import.meta.url === `file://${realpathSync(process.argv[1])}`;
+  } catch {
+    return import.meta.url === `file://${process.argv[1]}`;
+  }
+}
+
+if (isEntrypoint()) {
   main().catch((e) => {
     process.stderr.write(`vision-mcp fatal: ${e}\n`);
     process.exit(1);
