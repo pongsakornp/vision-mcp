@@ -30,11 +30,20 @@
     "model-context-protocol",
     "vision",
     "image-analysis",
+    "video-analysis",
     "ai-agent",
     "opencode",
     "claude",
     "llm"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pongsakornp/vision-mcp.git"
+  },
+  "homepage": "https://github.com/pongsakornp/vision-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/pongsakornp/vision-mcp/issues"
+  },
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
