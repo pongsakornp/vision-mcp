@@ -34,10 +34,18 @@ Most coding agents run on strong text models (DeepSeek, Claude, etc.) that can't
 
 ## Install
 
-### npm / npx (after publish)
+### npx from GitHub (no npm publish needed — works today)
 
 ```bash
 # Run directly (no install)
+npx -y github:pongsakornp/vision-mcp
+```
+
+> npx clones the repo, installs deps, auto-builds via the `prepare` script, and runs the server over stdio. This is the recommended install method until the package is published to the npm registry.
+
+### npm (after publish)
+
+```bash
 npx -y vision-mcp
 
 # Or install globally
@@ -64,7 +72,7 @@ npm run build
   "mcp": {
     "vision-mcp": {
       "type": "local",
-      "command": ["npx", "-y", "vision-mcp"],
+      "command": ["npx", "-y", "github:pongsakornp/vision-mcp"],
       "environment": {
         "GEMINI_API_KEY": "AIza...",
         "XAI_API_KEY": "xai-...",
@@ -83,7 +91,7 @@ npm run build
   "mcpServers": {
     "vision-mcp": {
       "command": "npx",
-      "args": ["-y", "vision-mcp"],
+      "args": ["-y", "github:pongsakornp/vision-mcp"],
       "env": {
         "GEMINI_API_KEY": "AIza..."
       }
@@ -100,7 +108,7 @@ npm run build
     "vision-mcp": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "vision-mcp"],
+      "args": ["-y", "github:pongsakornp/vision-mcp"],
       "environment": {
         "GEMINI_API_KEY": "AIza..."
       }
