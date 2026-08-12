@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Test artifacts
+coverage/
+
+# Env / secrets
+.env
+.env.*
+*.local
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# npm
+*.tgz
+npm-debug.log*
